@@ -288,13 +288,13 @@ section{
     top: 0;
     background: #77dd77;
 }
-.skills .skills-content .right .line.css::before{
-    width: 60%;
+.skills .skills-content .right .line.flask::before{
+    width: 90%;
 }
 .skills .skills-content .right .line.js::before{
     width: 70%;
 }
-.skills .skills-content .right .line.py::before{
+.skills .skills-content .right .line.sql::before{
     width:  90%;
 }
 .skills .skills-content .right .line.cpp::before{
