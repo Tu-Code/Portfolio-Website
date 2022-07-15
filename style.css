@@ -295,7 +295,7 @@ section{
     width: 70%;
 }
 .skills .skills-content .right .line.sql::before{
-    width:  90%;
+    width:  80%;
 }
 .skills .skills-content .right .line.cpp::before{
     width: 80%;
