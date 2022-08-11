@@ -292,7 +292,7 @@ section{
     width: 90%;
 }
 .skills .skills-content .right .line.js::before{
-    width: 70%;
+    width: 80%;
 }
 .skills .skills-content .right .line.sql::before{
     width:  80%;
