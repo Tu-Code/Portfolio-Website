@@ -210,7 +210,7 @@
                     
                     <!-- will work when hosted -->
                     <!-- <form onsubmit="sendEmail(); reset(); return false;"> -->
-                    <form action="https://formsubmit.co/solarinsarah3@gmail.com" onsubmit="reset();" method="POST">
+                    <form id="contact-form" action="https://formsubmit.co/solarinsarah3@gmail.com" onsubmit="reset();" method="POST">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" name="name" placeholder="Name" required>
@@ -223,7 +223,7 @@
                             <input type="hidden" name="_subject" value="New submission!" placeholder="Subject">
                         </div>
                         <div class="field textarea">
-                            <textarea placeholder="Describe offer.."  name="message"" id="" cols="30" rows="10" required></textarea>
+                            <textarea placeholder="Describe offer.."  name="message" id="" cols="30" rows="10" required></textarea>
                         </div>
 
                         <div class="button">
@@ -243,20 +243,18 @@
     <script src='script.js'></script>
     <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>        
     <script>
-         function sendEmail(){
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "solarinsarah3@gmail.com",
-                Password : "9FF04B0CCE2BA6089E18222526BF2E6CF319",
-                To : 'sarahsolarin56@gmail.com',
-                From : document.getElementById('email').value,
-                Subject : "New Contact Form Enquiry",
-                Body : "And this is the body"
-            }).then(
-            message => alert(message),
-            console.log(document.getElementById('email').value)
-            );
-        }
+         $.ajax({
+              var $form = $('#contact-form');
+              data: {
+                  name: $form.find('[name="name"]'),
+                  message: $form.find('[name="message"]'),
+                  email: $form.find('[name="email"]')
+              },
+              url: "https://formsubmit.co/ajax/data.email",
+              method: "POST",
+              data: data, 
+              dataType: "json"
+          });
     </script> -->
   </body>
 </html>
